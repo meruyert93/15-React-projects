@@ -189,3 +189,12 @@ main {
   outline: 1px solid rgba(242, 138, 178, 0.8);
   cursor: pointer;
 }
+
+.individualBtn {
+    background: gray !important;
+    font-size: 0.8rem !important;
+    background: var(--clr-grey-1);
+    outline: 1px solid white !important;
+    padding: 0.2rem !important;
+    
+}

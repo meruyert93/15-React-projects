@@ -44,7 +44,14 @@ function App() {
             </main>
         )
     }
-
+    if (tours.length === 0) {
+        return (
+            <div className="title">
+                <h1>No tours left</h1>
+                <button className="btn" onClick={fetchTours}>return tours</button>
+            </div>
+        )
+    }
     return (
         <main>
             <Tours tours={tours} removeTour={removeTour}/>

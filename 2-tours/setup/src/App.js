@@ -9,11 +9,28 @@ function App() {
     const [loading, setLoading] = useState(true);
     const [tours, setTours] = useState([])
 
+    const fetchTours = async () => {
 
-    fetch(url)
-        .then(response => response.json())
-        .then(tours => console.log(tours))
-        .catch(error => console.log(error))
+        try {
+            const response = await fetch(url)
+            const tours = await response.json();
+            setLoading(false);
+            setTours(tours)
+            //console.log(tours);
+        } catch(error) {
+            setLoading(false)
+            console.log(error);
+        }   
+    };
+
+    useEffect(()=> {
+        fetchTours();
+    }, [])
+
+    // fetch(url)
+    //     .then(response => response.json())
+    //     .then(tours => console.log(tours))
+    //     .catch(error => console.log(error))
         
     if(loading) {
         return (
@@ -24,9 +41,10 @@ function App() {
     }
 
     return (
-        <>
-            <h1>Tours Project Setup</h1>
-        </>)
+        <main>
+            <Tours tours={tours}/>
+            {/* <h1>Tours Project Setup</h1> */}
+        </main>)
 }
 
 export default App

@@ -4,15 +4,17 @@ import { links, social } from './data'
 import logo from './logo.svg'
 
 const Navbar = () => {
+    const [showLinks, setShowLinks] = useState(false)
     return (
         <nav className="nav-center">
             <div className="nav-header">
                 <img src={logo} alt="logo"/>
-                <button className="nav-toggle">
+                <button className="nav-toggle" onClick={() => setShowLinks(!showLinks)}>
                     <FaBars/>
                 </button>
             </div>
-            <div className="links-container show-container">
+            {showLinks && (
+                <div className="links-container show-container">
                 <ul className="links">
                     {links.map((link) => {
                         const {id, url, text} = link;
@@ -25,6 +27,8 @@ const Navbar = () => {
                     })}
                 </ul>
             </div>
+            )}
+     
             <ul className="social-icons">
                     {social.map((socialIcon) => {
                         const {id, url, icon} = socialIcon;

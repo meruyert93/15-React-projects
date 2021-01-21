@@ -1,4 +1,7 @@
-## Corresponding Tutorial Topics
+## 15 React-projects
+This is a collection of 15 mini-projects developed by React.js. These projects were heavily focused on functionality. The main purpose of the building this project was to solidify the skills in React Fundamentals.
+
+## Corresponding topics:
 
 #### useState
 
@@ -38,13 +41,5 @@
 
 ## Advanced Projects (Course Exclusive)
 
-[Course Link](https://www.udemy.com/course/react-tutorial-and-projects-course/?couponCode=REACT-OCT)
+[Link to the deployed web app:](https://mk-react-project.netlify.app/)
 
-16. Markdown Preview
-17. Random Person
-18. Pagination
-19. Stock Photos
-20. Dark Mode
-21. Movie DB
-22. Hacker News
-23. Quiz
